@@ -7,6 +7,7 @@ class Aguila
      nombre: String,
      edad: Int)
     : SerVivo(peso, nombre, edad){
+
     override fun info() {
         println("""
             El aguila pesa $peso,

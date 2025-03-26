@@ -6,6 +6,7 @@ class Perro
      nombre: String,
      edad: Int)
     : SerVivo(peso, nombre, edad) {
+
     override fun info() {
         println("""
             El nombre del perro es $nombre,
@@ -22,4 +23,14 @@ class Perro
     override fun hacerSonido() {
         println("El perro ladra")
     }
+
+    override var nombre: String = nombre
+        set(value) {
+            if (value.isNotBlank()) {
+                println("Cambiando nombre de $field a $value")
+                field = value
+            } else {
+                println("Error: El nombre no puede estar vacío")
+            }
+        }
 }

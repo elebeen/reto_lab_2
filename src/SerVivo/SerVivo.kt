@@ -2,10 +2,16 @@ package SerVivo
 
 abstract class SerVivo(
     var peso: Double,
-    var nombre: String,
+    open var nombre: String,
     var edad: Int
 ) {
     abstract fun info()
     abstract fun mover()
     abstract fun hacerSonido()
+
+    constructor(nombre: String, edad: Int) : this(
+        nombre = nombre,
+        edad = edad,
+        peso = 0.0
+    )
 }

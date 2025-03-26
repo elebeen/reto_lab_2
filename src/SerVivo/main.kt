@@ -1,7 +1,7 @@
 package SerVivo
 
 fun CrearSerVivo(){
-    var persona_1: Humano = Humano(68.0,"Carlos", 25)
+    var persona_1 = Humano(68.0,"Carlos", 25)
     persona_1.esMayor
     persona_1.info()
     persona_1.mover()
@@ -9,13 +9,15 @@ fun CrearSerVivo(){
     persona_1.pasatiempos()
     println("")
 
-    var perro_1: Perro = Perro("Chihuahua", 6.5, "Rosa", 6)
+    var perro_1= Perro("Chihuahua", 6.5, "Rosa", 6)
     perro_1.info()
     perro_1.mover()
     perro_1.hacerSonido()
+    perro_1.nombre = "pepe"
+    perro_1.info()
     println("")
 
-    var aguila_1: Aguila = Aguila("Real",3.5, 40.6, "Lala", 40)
+    var aguila_1= Aguila("Real",3.5, 40.6, "Lala", 40)
     aguila_1.info()
     aguila_1.mover()
     aguila_1.hacerSonido()

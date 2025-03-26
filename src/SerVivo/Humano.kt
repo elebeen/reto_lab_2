@@ -5,6 +5,7 @@ class Humano(
     nombre: String,
     edad: Int)
     : SerVivo(peso, nombre, edad), Acciones {
+
     override fun info() {
         println("""
             Mi nombre es $nombre
@@ -24,7 +25,11 @@ class Humano(
     override fun pasatiempos() {
         println("Yo toco la guitarra y juego videojuegos")
     }
-    val esMayor: Boolean
-        get() = edad >= 18
 
+    override fun pensamientos() {
+        println("El humano piensa")
+    }
+
+    var esMayor: Boolean = false
+        get() = edad >= 18
 }
